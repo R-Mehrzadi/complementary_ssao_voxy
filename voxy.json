@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "uniforms": [
+    "frameCounter",
+    "gbufferProjection",
+    "gbufferProjectionInverse",
+    "gbufferModelViewInverse",
+    "gbufferPreviousProjection",
+    "gbufferPreviousModelView",
+    "viewWidth",
+    "viewHeight",
+    "aspectRatio",
+    "near",
+    "far",
+    "blindness",
+    "fogMode",
+    "fogColor",
+    "isEyeInWater",
+    "eyeBrightnessSmooth"
+  ],
+  "samplers": {
+    "colortex0": "sampler2D",
+    "colortex1": "sampler2D",
+    "colortex2": "sampler2D",
+    "depthtex0": "sampler2D",
+    "noisetex": "sampler2D"
+  },
+  "opaqueDrawBuffers": [16],
+  "translucentDrawBuffers": [17],
+  "opaquePatchData": "#include \"/voxy_opaque.glsl\"",
+  "translucentPatchData": "#include \"/voxy_translucent.glsl\""
+}
