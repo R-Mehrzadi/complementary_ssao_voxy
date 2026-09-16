@@ -27,6 +27,6 @@
   },
   "opaqueDrawBuffers": [16],
   "translucentDrawBuffers": [17],
-  "opaquePatchData": "#include \"/voxy_opaque.glsl\"",
-  "translucentPatchData": "#include \"/voxy_translucent.glsl\""
+  "opaquePatchData": "void voxy_emitFragment(VoxyFragmentParameters parameters) { discard; }",
+  "translucentPatchData": "void voxy_emitFragment(VoxyFragmentParameters parameters) { discard; }"
 }
