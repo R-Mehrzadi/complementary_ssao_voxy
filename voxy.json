@@ -2,31 +2,15 @@
   "version": 1,
   "uniforms": [
     "frameCounter",
-    "gbufferProjection",
-    "gbufferProjectionInverse",
-    "gbufferModelViewInverse",
-    "gbufferPreviousProjection",
-    "gbufferPreviousModelView",
     "viewWidth",
-    "viewHeight",
-    "aspectRatio",
-    "near",
-    "far",
-    "blindness",
-    "fogMode",
-    "fogColor",
-    "isEyeInWater",
-    "eyeBrightnessSmooth"
+    "viewHeight"
   ],
   "samplers": {
-    "colortex0": "sampler2D",
-    "colortex1": "sampler2D",
-    "colortex2": "sampler2D",
     "depthtex0": "sampler2D",
     "noisetex": "sampler2D"
   },
   "opaqueDrawBuffers": [16],
   "translucentDrawBuffers": [17],
-  "opaquePatchData": "void voxy_emitFragment(VoxyFragmentParameters parameters) { discard; }",
-  "translucentPatchData": "void voxy_emitFragment(VoxyFragmentParameters parameters) { discard; }"
+  "opaquePatchData": "gl_FragData[0] = vec4(parameters.sampledColour.rgb, 1.0);",
+  "translucentPatchData": "gl_FragData[0] = parameters.sampledColour;"
 }
